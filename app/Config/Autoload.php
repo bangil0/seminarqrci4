@@ -11,12 +11,7 @@ require_once SYSTEMPATH . 'Config/AutoloadConfig.php';
  */
 class Autoload extends \CodeIgniter\Config\AutoloadConfig
 {
-	public $psr4 = [
-		'Config'      => APPPATH . 'Config',
-        APP_NAMESPACE => APPPATH,
-        'App'         => APPPATH,
-        'Myth\Auth'   => APPPATH .'ThirdParty/myth-auth/src',
-	];
+	public $psr4 = [];
 
 	public $classmap = [];
 
@@ -58,6 +53,7 @@ class Autoload extends \CodeIgniter\Config\AutoloadConfig
 			'App'         => APPPATH,                // To ensure filters, etc still found,
 			APP_NAMESPACE => APPPATH,                // For custom namespace
 			'Config'      => APPPATH . 'Config',
+			'Myth\Auth'   => APPPATH .'ThirdParty/myth-auth/src',
 		];
 
 		/**
